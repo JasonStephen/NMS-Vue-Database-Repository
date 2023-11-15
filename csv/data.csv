@@ -1,0 +1,14 @@
+ID,隐藏状态,基地名字,标签,编号,维度,星系,经济,冲突等级,优势生命体,星球代码,星球,气候,护卫,植物群系,动物群系,基地部署,代码状态,发现者ID
+1,0,JasonHome001,宜居/家,YJ001,欧几里得,Eyskoid,,,,4015082F69DC,Laomis N42,,,,,已部署,编号正确,100
+2,0,JasonHome002,宜居/家,YJ002,欧几里得,Eyskoid,,,,1015082F69DC,Gukokabu,,,,,已部署,编号正确,100
+3,0,JasonSeaHouse,宜居/家,YJ003,欧几里得,Anyone know any cool names,,,,6015082F69DC,Naxo XVIII,,,,,待选址,编号待纠正,100
+4,0,中转基地1,中转站,ZZ001,欧几里得,Jixiumh-Mod,,,,3079082F59DC,Gajor 18/Y2,,,,,已部署,编号待纠正,100
+5,0,ITHome001,智能/宜居/家,ITH01,欧几里得,Ininskyvi,,,,7159FFDB3754,Badod,,,,,已部署,编号错误,102
+6,0,SimEarthArea,类地行星,LD001,欧几里得,BoRong XII,,,,20C1024E34AD,Sacu,,,,,部署未建设,编号正确,101
+7,0,Jason的004家,宜居/家,YJ004,欧几里得,Qoiden,,,,6049FE46AAF7,Uditha P26,,,,,已部署,编号正确,100
+8,0,JasonHome-Pusamier,半宜居/类地行星/家,EJ001,欧几里得,Oyabus-Ann,,,,20FAFE46AAF8,Egiru,,,,,已部署,编号正确,100
+9,0,NULL,宜居/家,YJ005,欧几里得,NULL,,,,NULL,NULL,,,,,已部署,NULL,101
+10,0,JasonSkyScraper,空中/基地,SC001,欧几里得,Fisdalsbe VII,,,,NULL,Ryla,,,,,已部署,编号待纠正,100
+11,0,JasonPinkHome-Jolisbo,粉色/家,PKH01,欧几里得,Nukaavitn VII,,,,60B1056DFF35,Pele,,,,,仅供电,编号正确,100
+12,0,JasonBubleHome-Faelum,泡泡/家,BBH01,欧几里得,Eslavy-Gef,,,,2001036E0F35,Lompen D,,,,,仅供电,编号正确,100
+13,0,EarthHome-Semya,宜居/类地行星/家,EJ002,欧几里得,Eghamno-Jied,,,,1088036DDF32,Bans II,,,,,已部署,编号正确,102
