@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无人深空基地编辑工具</title>
+</head>
+<body>
+    <div id="editdata">
+
+        <div>
+            <input type="text" v-model="searchQuery" placeholder="请输入搜索信息" />
+            <button @click="search">搜索</button>
+            <button @click="addRow">添加</button>
+            <button @click="toggleAdvanced">高级</button>
+        </div>
+
+        <div v-if="showAdvanced">
+            <h2>高级选项：</h2>
+            <button v-for="column in Object.keys(searchResults[0])" :key="column" @click="toggleSort(column)" v-if="!hiddenColumns.includes(column)">
+                {{ column }}{{ getSortIndicator(column) }}
+            </button>
+        </div>
+
+        <div v-if="searchResults.length > 0">
+            <h2>搜索结果：</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th v-for="(value, key) in searchResults[0]" :key="key" v-if="!hiddenColumns.includes(key)">{{ key }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 修改数据行部分，添加 v-if 控制显示隐藏 -->
+                    <tr v-for="(row, index) in searchResults" :key="index">
+                        <td v-for="(value, key) in row" :key="key" v-if="!hiddenColumns.includes(key)">{{ value }}</td>
+                        <td><button @click="editRow(index)">编辑</button></td>
+                        <td><button @click="changeHiddenState(index)">删除</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div v-if="editingIndex !== null">
+            <h2>编辑信息</h2>
+            <div v-for="(value, key) in searchResults[editingIndex]" :key="key" v-if="!hiddenColumns.includes(key)">
+                <label>{{ key }}:</label>
+                <input v-model="searchResults[editingIndex][key]" />
+            </div>
+            <button @click="saveEdit">保存</button>
+            <button @click="cancelEdit">取消</button>
+        </div>
+
+        
+    </div>
+
+    <!-- Vue.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <!-- PapaParse from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <!-- Javascript from local -->
+    <script src="./js/data-edit.js"></script>
+</body>
+</html>
