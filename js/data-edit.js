@@ -24,6 +24,7 @@ new Vue({
     },
     methods: {
         getCsvData() { //返回CSV数据
+            console.log('[INFO] Use getCsvData')
 
             fetch('http://localhost:3000/get-csv')
                 .then(response => response.json())
@@ -38,6 +39,7 @@ new Vue({
         },
 
         parseCsvData(data) { //在这个地方添加需要转换的字符类型
+            console.log('[INFO] Use parseCsvData')
             // 初始化 CSV 数据并转换 ID 列为整数类型
             return data.map(row => {
                 // 使用解构赋值创建新的对象以避免直接修改原始数据
@@ -54,9 +56,11 @@ new Vue({
 
         toggleAdvanced() {
             this.showAdvanced = !this.showAdvanced;
+            console.log('[INFO] Use ToggleAdvanced')
         },
 
         toggleSort(column) {
+            console.log('[INFO] Use toggleSort')
             const index = this.sortOptions.findIndex(opt => opt.column === column);
         
             if (index === -1) {
@@ -78,6 +82,7 @@ new Vue({
         },        
     
         getSortIndicator(column) {
+            console.log('[INFO] Use getSortIndicator')
             const sortOption = this.sortOptions.find(opt => opt.column === column);
     
             if (sortOption) {
@@ -88,6 +93,7 @@ new Vue({
         },
     
         sortResults() {
+            console.log('[INFO] Use sortResults')
             this.searchResults.sort((a, b) => {
                 for (const { column, order } of this.sortOptions) {
                     const aValue = a[column];
@@ -114,6 +120,7 @@ new Vue({
         },
 
         search() { //带过滤的搜索功能
+            console.log('[INFO] Use Search')
             if (!this.searchQuery) {
                 // 如果搜索框为空，显示所有数据
                 this.searchResults = this.csvData.filter(row => row['隐藏状态'] !== '1');
@@ -131,10 +138,12 @@ new Vue({
         },
 
         editRow(index) { //编辑行
+            console.log('[INFO] Use EditRow')
             this.editingIndex = index;
         },
 
         addRow() {
+            console.log('[INFO] Use addRow')
             // 如果正在编辑其他行，先保存编辑
             if (this.editingIndex !== null) {
                 this.saveEdit();
@@ -172,6 +181,7 @@ new Vue({
         
 
         changeHiddenState(index) { //伪删除
+            console.log('[INFO] Use changeHiddenState')
             // 设置 '隐藏状态' 列的值为1
             this.searchResults[index]['隐藏状态'] = '1';
     
@@ -186,6 +196,7 @@ new Vue({
         },
 
         saveEdit() { //保存编辑
+            console.log('[INFO] Use saveEdit')
             // 执行任何必要的验证或保存逻辑
             this.editingIndex = null;
 
@@ -201,6 +212,7 @@ new Vue({
         },
 
         cancelEdit() {
+            console.log('[INFO] Use cancelEdit')
             // 取消编辑，恢复原始数据
             if (this.editingIndex !== null) {
                 // 如果有正在编辑的行，将编辑状态设置为null
@@ -212,6 +224,7 @@ new Vue({
         },
         
         saveToServer() { //发送更新后的 CSV 数据到服务器
+            console.log('[INFO] Use saveToServer')
             fetch('http://localhost:3000/save-csv', {
                 method: 'POST',
                 headers: {
