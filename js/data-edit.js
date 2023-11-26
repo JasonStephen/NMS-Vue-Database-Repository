@@ -24,7 +24,7 @@ new Vue({
     },
     methods: {
         getCsvData() { //返回CSV数据
-
+            console.log('[COMPLETED] Get CSV data.');
             fetch('http://localhost:3000/get-csv')
                 .then(response => response.json())
                 .then(data => {
@@ -53,10 +53,12 @@ new Vue({
         },
 
         toggleAdvanced() {
+            console.log('[COMPLETED] Toggle advanced options.');
             this.showAdvanced = !this.showAdvanced;
         },
 
         toggleSort(column) {
+            console.log('[COMPLETED] Toggle sort.');
             const index = this.sortOptions.findIndex(opt => opt.column === column);
         
             if (index === -1) {
@@ -78,6 +80,7 @@ new Vue({
         },        
     
         getSortIndicator(column) {
+            console.log('[COMPLETED] Get sort indicator.');
             const sortOption = this.sortOptions.find(opt => opt.column === column);
     
             if (sortOption) {
@@ -88,6 +91,7 @@ new Vue({
         },
     
         sortResults() {
+            console.log('[COMPLETED] Sort results.');
             this.searchResults.sort((a, b) => {
                 for (const { column, order } of this.sortOptions) {
                     const aValue = a[column];
@@ -114,6 +118,7 @@ new Vue({
         },
 
         search() {
+            console.log('[COMPLETED] Search.');
             // 清空排序选项数组
             this.sortOptions = [];
         
@@ -137,13 +142,16 @@ new Vue({
         },
 
         editRow(index) { //编辑行
+            console.log('[COMPLETED] Edit row.');
             this.editingIndex = index;
         },
 
         addRow() {
+            console.log('[COMPLETED] Add row.');
             // 如果正在编辑其他行，先保存编辑
             if (this.editingIndex !== null) {
                 this.saveEdit();
+                console.log('[AddRow] run saveEdit()');
             }
         
             // 在添加行之前，你可以初始化新行的数据，例如：
@@ -159,6 +167,9 @@ new Vue({
                     if (column === 'ID') {
                         const lastId = this.csvData.length > 0 ? this.csvData[this.csvData.length - 1].ID : 0;
                         this.newRecord[column] = lastId + 1;
+                        console.log('[AddRow] run newRecord[column] = lastId + 1;');
+                    } else if (column === '隐藏状态') {
+                        this.newRecord[column] = '0';
                     } else {
                         this.newRecord[column] = ''; // 设置其他字段的默认值
                     }
@@ -168,30 +179,37 @@ new Vue({
         
             // 将新行的数据添加到数据数组中
             this.csvData.push(this.newRecord);
+            console.log('[AddRow] Add new data to Array.');
         
             // 设置新添加的行为当前正在编辑的行
             this.editingIndex = this.csvData.length - 1;
         
             // 重新执行搜索，确保新添加的行也能被显示
             this.search();
+        
+            // 调用EditRow去编辑当前添加的行
+            this.editRow(this.editingIndex);
         },
         
 
-        changeHiddenState(index) { //伪删除
-            // 设置 '隐藏状态' 列的值为1
-            this.searchResults[index]['隐藏状态'] = '1';
-    
+        changeHiddenState(index) {
+            console.log('[COMPLETED] Change hidden state.');
+        
+            // 直接从 csvData 数组中移除相应的行
+            this.csvData.splice(index, 1);
+        
             // 如果需要，可以将更改后的数据保存到服务器
             this.saveToServer();
-    
+        
             // 清除编辑状态
             this.editingIndex = null;
-
+        
             // 重新执行搜索，确保新添加的行也能被显示
             this.search();
         },
-
+        
         saveEdit() { //保存编辑
+            console.log('[COMPLETED] Save edit.');
             // 执行任何必要的验证或保存逻辑
             this.editingIndex = null;
 
@@ -204,9 +222,13 @@ new Vue({
             }
 
             this.search();
+
+            console.log('Edited Row:', this.searchResults[this.editingIndex]);
+            console.log('CSV Data:', this.csvData);
         },
 
         cancelEdit() {
+            console.log('[COMPLETED] Cancel edit.');
             // 取消编辑，恢复原始数据
             if (this.editingIndex !== null) {
                 // 如果有正在编辑的行，将编辑状态设置为null
@@ -218,6 +240,7 @@ new Vue({
         },
         
         saveToServer() { //发送更新后的 CSV 数据到服务器
+            console.log('[COMPLETED] Save to server.');
             fetch('http://localhost:3000/save-csv', {
                 method: 'POST',
                 headers: {

@@ -33,7 +33,9 @@
                 <tbody>
                     <!-- 修改数据行部分，添加 v-if 控制显示隐藏 -->
                     <tr v-for="(row, index) in searchResults" :key="index">
-                        <td v-for="(value, key) in row" :key="key" v-if="!hiddenColumns.includes(key)">{{ value }}</td>
+                        <td v-for="(value, key) in row" :key="key" v-if="!hiddenColumns.includes(key)">
+                            {{ value !== '' ? value : '用户未填写内容' }}
+                        </td>
                         <td><button @click="editRow(index)">编辑</button></td>
                         <td><button @click="changeHiddenState(index)">删除</button></td>
                     </tr>
