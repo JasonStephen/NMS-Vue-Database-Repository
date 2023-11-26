@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    <div id="app">
+        <h2>Login</h2>
+        <form @submit.prevent="login">
+            <label for="username">Username:</label>
+            <input type="text" id="username" v-model="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" v-model="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="registration">
+        <h2>Register</h2>
+        <form @submit.prevent="register">
+          <label for="newUsername">Username:</label>
+          <input type="text" id="newUsername" v-model="newUser.username" required>
+      
+          <label for="newPassword">Password:</label>
+          <input type="password" id="newPassword" v-model="newUser.password" required>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" v-model="newUser.email" required>
+      
+          <label for="role">Role:</label>
+          <input type="text" id="role" v-model="newUser.role" required>
+      
+          <button type="submit">Register</button>
+        </form>
+      </div>
+
+    <!-- Vue.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <!-- Your custom JavaScript file -->
+    <script src="path/to/your/script.js"></script>
+
+    <script src="./js/user-login-reg.js"></script>
+
+</body>
+</html>
