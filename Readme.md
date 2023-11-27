@@ -16,7 +16,7 @@
 <div align="center"><h1> !!!警告!!!</h1></div>
 <div align="center"><h3>该项目不得转载并用于以下领域，包括但不限于</h3></div>
 <div align="center"><h3>1. 任何参与分数以及排行评选的领域(例如期末考试项目，毕业设计项目，竞赛等)。</h3></div>
-<div align="center"><h3>归属者有权利向侵权方进行投诉，对我校侵权此项目的学生追究相关的责任</h3></div>
+<div align="center"><h3>归属者有权利向侵权方进行投诉，对我校侵权此项目的学生追究相关的责任(最终解释权归本人所有)</h3></div>
 
 <div align="center">©2023 Jason_Stephen & Entropy Reduction Studio Project Uploaded To Github </div>
 <div align="center">All Rights Reserved </div>
