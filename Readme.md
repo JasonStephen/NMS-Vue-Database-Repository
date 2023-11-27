@@ -5,5 +5,5 @@
 <div align="center"><h1> !!!ALERT!!!</h1></div>
 <div align="center"><h3>The project may not be reproduced and used for final test assignments or graduation design projects.</h3></div>
 
-#### <div align="center">©2023 Jason_Stephen & Entropy Reduction Studio Project Uploaded To Github </div>
-#### <div align="center">All Rights Reserved </div>
+<div align="center">©2023 Jason_Stephen & Entropy Reduction Studio Project Uploaded To Github </div>
+<div align="center">All Rights Reserved </div>
