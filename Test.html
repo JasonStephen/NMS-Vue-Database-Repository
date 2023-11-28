@@ -17,8 +17,11 @@
 
         <div v-if="showAdvanced">
             <h2>高级选项：</h2>
-            <button v-for="column in Object.keys(searchResults[0])" :key="column" @click="toggleSort(column)" v-if="!hiddenColumns.includes(column)">
-                {{ column }}{{ getSortIndicator(column) }}
+            <button @click="toggleSort('发现时间')" :style="{ color: getSortButtonColor('发现时间') }">
+                最新{{ getSortIndicator('发现时间') }}
+            </button>
+            <button @click="toggleSort('浏览量')" :style="{ color: getSortButtonColor('浏览量') }">
+                最多查看{{ getSortIndicator('浏览量') }}
             </button>
         </div>
 
@@ -36,22 +39,34 @@
                         <td v-for="(value, key) in row" :key="key" v-if="!hiddenColumns.includes(key)">
                             {{ value !== '' ? value : '用户未填写内容' }}
                         </td>
-                        <td><button @click="editRow(index)">编辑</button></td>
-                        <td><button @click="changeHiddenState(index)">删除</button></td>
+                        <td><button @click="viewDetails(index)">查看详情</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
+        <div v-if="showDetailsIndex !== null">
+            <h2>详情信息</h2>
+            <div v-for="(value, key) in searchResults[showDetailsIndex]" :key="key" v-if="!hiddenColumns.includes(key)">
+                <label v-if="!hiddenColumns.includes(key)">{{ key }}:</label>
+                <span>{{ searchResults[showDetailsIndex][key] }}</span>
+            </div>
+            <!-- 添加编辑和删除按钮 -->
+            <button @click="closeDetails">关闭详情</button>
+            <button @click="editDetails(showDetailsIndex)">编辑</button>
+            <button @click="deleteDetails(showDetailsIndex)">删除</button>
+        </div>
+
         <div v-if="editingIndex !== null">
             <h2>编辑信息</h2>
             <div v-for="(value, key) in searchResults[editingIndex]" :key="key" v-if="!hiddenColumns.includes(key)">
-                <label>{{ key }}:</label>
-                <input v-model="searchResults[editingIndex][key]" />
+                <label v-if="!hiddenColumns.includes(key) && key !== '发现时间'">{{ key }}:</label>
+                <input v-model="searchResults[editingIndex][key]" v-if="!hiddenColumns.includes(key) && key !== '发现时间'" />
             </div>
             <button @click="saveEdit">保存</button>
             <button @click="cancelEdit">取消</button>
         </div>
+        
 
         
     </div>

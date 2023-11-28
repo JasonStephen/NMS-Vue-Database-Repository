@@ -1,18 +1,17 @@
-ID,隐藏状态,基地名字,标签,编号,维度,星系,经济,冲突等级,优势生命体,星球代码,星球,气候,护卫,植物群系,动物群系,基地部署,代码状态,发现者ID
-1,0,JasonHome001,宜居/家,YJ001,欧几里得,Eyskoid,,,,4015082F69DC,Laomis N42,,,,,已部署,编号正确,100
-2,0,JasonHome002,宜居/家,YJ002,欧几里得,Eyskoid,,,,1015082F69DC,Gukokabu,,,,,已部署,编号正确,100
-3,0,JasonSeaHouse,宜居/家,YJ003,欧几里得,Anyone know any cool names,,,,6015082F69DC,Naxo XVIII,,,,,待选址,编号待纠正,100
-4,0,中转基地1,中转站,ZZ001,欧几里得,Jixiumh-Mod,,,,3079082F59DC,Gajor 18/Y2,,,,,已部署,编号待纠正,100
-5,0,ITHome001,智能/宜居/家,ITH01,欧几里得,Ininskyvi,,,,7159FFDB3754,Badod,,,,,已部署,编号错误,102
-6,0,SimEarthArea,类地行星,LD001,欧几里得,BoRong XII,,,,20C1024E34AD,Sacu,,,,,部署未建设,编号正确,101
-7,0,Jason的004家,宜居/家,YJ004,欧几里得,Qoiden,,,,6049FE46AAF7,Uditha P26,,,,,已部署,编号正确,100
-8,0,JasonHome-Pusamier,半宜居/类地行星/家,EJ001,欧几里得,Oyabus-Ann,,,,20FAFE46AAF8,Egiru,,,,,已部署,编号正确,100
-9,0,,宜居/家,YJ005,欧几里得,,,,,,,,,,,已部署,,101
-10,0,JasonSkyScraper,空中/基地,SC001,欧几里得,Fisdalsbe VII,,,,,Ryla,,,,,已部署,编号待纠正,100
-11,0,JasonPinkHome-Jolisbo,粉色/家,PKH01,欧几里得,Nukaavitn VII,,,,60B1056DFF35,Pele,,,,,仅供电,编号正确,100
-12,0,JasonBubleHome-Faelum,泡泡/家,BBH01,欧几里得,Eslavy-Gef,,,,2001036E0F35,Lompen D,,,,,仅供电,编号正确,100
-13,0,EarthHome-Semya,宜居/类地行星/家,EJ002,欧几里得,Eghamno-Jied,,,,1088036DDF32,Bans II,,,,,已部署,编号正确,102
-14,0,JasonHome-Zephyra,泡泡/乐土/家,BBH02,欧几里得,Tosialnye,大量生产/大量,强大,科尔瓦克斯,106C02FA36DA,Le Yuan,腐化之血,分散,繁多,丰富,待重建,编号正确,
-15,0,JasonHome-Rooke,半宜居/遗址/家,EJ002,欧几里得,Woding,数学/可持续的,喧闹,科尔瓦克斯,207A056DEF35,Oetsu 97/S7,通常比较温和(下开水),有限,种类丰富,种类丰富,未建造,编号正确,
-16,0,TP-Teakdas,一周目传送门,TPERA,欧几里得,Rastora-Nagil,商业/黑市,被海盗控制,吉克,107A056DFF36,Gwols,猛烈的湿温,低级警戒,丰富,富庶,仅供电,编码正确,
-17,0,JasonMoon-Botist,月球/基地,MN001,希尔伯特,Iharak XIII,试验/中量补给,险恶,维吉恩,504700659302,Olswo,晴空,不定期巡逻,匮乏,匮乏,已部署,编号正确,
+ID,浏览量,标题,简介,图片路径,基地名字,标签,编号,维度,星系,经济,冲突等级,优势生命体,星球代码,星球,气候,护卫,植物群系,动物群系,基地部署,坐标状态,发现者ID,发现时间
+1,793,第一个家,不要问，这就是我的第一个家,,JasonHome01,宜居/家,YJ001,欧几里得,Eyskoid,技术/有希望,零星,吉克,4015082F69DC,Laomis N42,猛烈的温湿,不定期巡逻,充足,充足,已部署,正确,100,2022-04-15
+2,574,,,,JasonHome002,宜居/家,YJ002,欧几里得,Eyskoid,技术/有希望的,零星,吉克,1015082F69DC,Gukokabu,极冷,间歇,丰富,经常,已部署,正确,100,2023-02-08
+3,415,,,,JasonSeaHouse,宜居/家,YJ003,欧几里得,Anyone know any cool names,研究/不经世事,重量,维吉恩,6015082F69DC,Naxo XVIII,柔和,要求服从,大量,丰富,待选址,错误,100,2022-11-03
+4,350,,,,中转基地1,中转站,ZZ001,欧几里得,Jixiumh-Mod,,,,3079082F59DC,Gajor 18/Y2,,,,,已部署,错误,100,2023-10-22
+5,106,,,,ITHome001,智能/宜居/家,ITH01,欧几里得,Ininskyvi,,,,7159FFDB3754,Badod,,,,,已部署,错误,102,2022-07-18
+6,208,,,,SimEarthArea,类地行星,LD001,欧几里得,BoRong XII,,,,20C1024E34AD,Sacu,,,,,部署未建设,正确,101,2022-01-30
+7,348,,,,Jason的004家,宜居/家,YJ004,欧几里得,Qoiden,,,,6049FE46AAF7,Uditha P26,,,,,已部署,正确,100,2022-09-11
+8,65,,,,JasonHome-Pusamier,半宜居/类地行星/家,EJ001,欧几里得,Oyabus-Ann,,,,20FAFE46AAF8,Egiru,,,,,已部署,正确,100,2022-08-25
+9,303,,,,JasonSkyScraper,空中/基地,SC001,欧几里得,Fisdalsbe VII,,,,,Ryla,,,,,已部署,错误,100,2022-06-06
+10,512,,,,JasonPinkHome-Jolisbo,粉色/家,PKH01,欧几里得,Nukaavitn VII,,,,60B1056DFF35,Pele,,,,,仅供电,正确,100,2023-09-02
+11,103,,,,JasonBubleHome-Faelum,泡泡/家,BBH01,欧几里得,Eslavy-Gef,,,,2001036E0F35,Lompen D,,,,,仅供电,正确,100,2023-03-14
+12,1212,,,,EarthHome-Semya,宜居/类地行星/家,EJ002,欧几里得,Eghamno-Jied,数学/可持续的,喧闹,科尔瓦克斯,1088036DDF32,Bans II,通常比较温和,有限,种类丰富,种类丰富,已部署,正确,102,2022-12-19
+13,202,,,,JasonHome-Zephyra,泡泡/乐土/家,BBH02,欧几里得,Tosialnye,大量生产/大量,强大,科尔瓦克斯,106C02FA36DA,Le Yuan,腐化之血,分散,繁多,丰富,待重建,正确,101,2023-06-28
+14,159,,,,JasonHome-Rooke,半宜居/遗址/家,EJ003,欧几里得,Woding,数学/可持续的,喧闹,科尔瓦克斯,207A056DEF35,Oetsu 97/S7,通常比较温和,有限,种类丰富,种类丰富,未建造,正确,100,2023-08-07
+15,219,,,,TP-Teakdas,一周目传送门,TPERA,欧几里得,Rastora-Nagil,商业/黑市,被海盗控制,吉克,107A056DFF36,Gwols,猛烈的湿温,低级警戒,丰富,富庶,仅供电,正确,100,2022-05-12
+16,166,,,,JasonMoon-Botist,月球/基地,MN001,希尔伯特,Iharak XIII,试验/中量补给,险恶,维吉恩,504700659302,Olswo,晴空,不定期巡逻,匮乏,匮乏,已部署,正确,100,2023-05-01
